@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:scrollbars="none"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeechToTextActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="15dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/text_result_stt"
+        android:inputType="textMultiLine"
+        android:background="@drawable/et_bg"
+        android:scrollbars="vertical"
+        android:scrollbarSize="0dp"
+        android:hint="Your result text will be shown here..."
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+
+        android:gravity="top" />
+</LinearLayout>
+    <Button
+        android:id="@+id/copy_text_stt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corner_button"
+        android:drawableStart="@drawable/ic_content_copy_black_24dp"
+        android:text="@string/copy_text"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/share_text_stt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+       android:layout_toEndOf="@+id/copy_text_stt"
+        android:background="@drawable/round_corner_button"
+        android:drawableEnd="@drawable/black_ic_share_black_24dp"
+        android:text="Share Text"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/tap_to_speak"
+        android:layout_below="@+id/copy_text_stt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_mic_black_24dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tap_to_speak"
+        android:id="@+id/linear_stt"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tap the above icon to speak!!"
+            android:textSize="20sp" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/copy_text_stt"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:layout_marginBottom="10dp">
+    <Switch
+        android:id="@+id/add_to_text_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:switchPadding="12dp"
+        android:text="Add to previous text"
+        android:enabled="true"
+        android:textSize="20sp"
+        />
+</LinearLayout>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner_stt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_stt"
+        android:layout_marginTop="25dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4064916316472596/5781793309"
+        />
+</RelativeLayout>
+</ScrollView>

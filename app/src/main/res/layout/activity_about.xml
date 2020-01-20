@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarSize="0dp"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25dp"
+    android:background="#ed2a4a"
+    android:layout_marginTop="10dp"
+    android:text="Image To Text:"
+    android:textColor="#ffffff"
+    android:id="@+id/it_text"
+    />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="&#8226;Extracts text from image"
+    android:layout_below="@+id/it_text"
+    android:id="@+id/t1"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:background="#ed2a4a"
+        android:layout_marginTop="10dp"
+        android:text="Text To Image:"
+        android:textColor="#ffffff"
+        android:id="@+id/ti_text"
+        android:layout_below="@+id/t1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&#8226;Convert text to image"
+        android:layout_below="@+id/ti_text"
+        android:textSize="20sp"
+        android:id="@+id/t2"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:background="#ed2a4a"
+        android:layout_marginTop="10dp"
+        android:text="Image To Text:"
+        android:textColor="#ffffff"
+        android:id="@+id/ts_text"
+        android:layout_below="@+id/t2"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&#8226;Extracts text from image"
+        android:layout_below="@+id/ts_text"
+        android:id="@+id/t3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25dp"
+    android:background="#ed2a4a"
+        android:layout_below="@+id/t3"
+    android:layout_marginTop="10dp"
+    android:text="Speech To Text:"
+    android:textColor="#ffffff"
+    android:id="@+id/st_text"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&#8226;Extracts text from image"
+        android:layout_below="@+id/st_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/t4"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t4"
+        android:id="@+id/update_text"
+        android:textSize="20sp"
+        android:textColor="#ed2a4a"
+        android:textStyle="bold|italic"
+        android:text="Features in the next update"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/update_text"
+        android:id="@+id/t5"
+        android:text="&#8226;Now Only English Language is supported\n&#8226;More languages will be included\n&#8226;Able to save Text to speech output as mp3 file in the device\n&#8226;Performance and accuracy will be improved\n&#8226;More Voices will be added in text to speech\n&#8226;UI will be improved"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t5"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/black_ic_share_black_24dp"
+        android:text="Share this App"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:id="@+id/share_btn"
+        android:textAllCaps="false"
+        android:background="@drawable/round_corner_button"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rateus_btn"
+        android:drawableStart="@drawable/ic_star_black_24dp"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:text="Rate Us.."
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/t5"
+        android:background="@drawable/round_corner_button"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rateus_btn"
+        android:id="@+id/linear_la">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Communicate with us"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:drawableEnd="@drawable/ic_email_black_24dp"
+            android:background="@drawable/round_corner_button"
+            android:id="@+id/communicate_btn"/>
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/about_bannerad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_la"
+        android:layout_marginTop="20dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4064916316472596/9634102933"
+      />
+</RelativeLayout>
+</ScrollView>
